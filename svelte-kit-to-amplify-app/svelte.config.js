@@ -4,12 +4,12 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 export default {
   kit: {
     adapter: adapter({
-      // Amplify に静的ホスティングさせるため fallback を指定
       fallback: 'index.html'
     }),
     paths: {
       base: ''
-    }
+    },
+    ssr: false
   },
   preprocess: vitePreprocess()
 };
